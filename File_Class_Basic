@@ -1,0 +1,54 @@
+1. File class
+The File class belongs to java.io. It represents a file or directory path. Creating a File object does not automatically create a file or folder on your computer.
+
+File file = new File("C:/Users/IT LAB II/Desktop/MyFiles/student.txt");
+
+
+Important methods
+Method	Purpose
+exists()	Checks whether the file or folder exists
+isFile()	Checks whether the path represents a file
+isDirectory()	Checks whether the path represents a directory
+getName()	Returns the file or folder name
+getPath()	Returns the path provided
+getAbsolutePath()	Returns the absolute path
+length()	Returns the file size in bytes
+createNewFile()	Creates an empty file if it doesn't exist
+mkdir()	Creates one directory
+mkdirs()	Creates directories, including missing parent directories
+delete()	Deletes a file or an empty directory
+renameTo()	Attempts to rename or move a file
+canRead()	Checks read permission
+canWrite()	Checks write permission
+canExecute()	Checks execute permission
+listFiles()	Returns the immediate contents of a directory as File[]
+Example: Create a folder and a file inside it
+import java.io.File;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        File folder = new File("C:/Users/IT LAB II/Desktop/MyFiles");
+
+        if (folder.mkdirs()) {
+            System.out.println("Folder created");
+        }
+
+        File file = new File(folder, "student.txt");
+
+        if (file.createNewFile()) {
+            System.out.println("File created");
+        } else {
+            System.out.println("File already exists");
+        }
+
+        System.out.println(file.getAbsolutePath());
+    }
+}
+
+
+Remember:
+- mkdirs() creates the directory structure.
+- createNewFile() creates the actual empty file.
+- new File(folder, "student.txt") constructs a file path inside the folder.
+- createNewFile() returns false if the file already exists.
