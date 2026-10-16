@@ -13,8 +13,12 @@ public class BufferWriter {
 		
 		BufferedWriter bf = new BufferedWriter(new FileWriter(folder , true));
 		
-		bf.write("\nHi ... I am suga in future i am java developer");
-	    bf.append(" and also full stack developer");
+		bf.write("Name: Suga");
+    	bf.newLine();
+    	bf.write("Department: CSE");
+        bf.newLine();
+        bf.write("Skill: Java");
+
 		bf.close();
 		
 		System.out.println("File updated");
