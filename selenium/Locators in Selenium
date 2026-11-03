@@ -1,0 +1,29 @@
+1. What is a Locator?
+    A locator is a mechanism used by Selenium to identify a particular HTML element on a webpage.
+    It contains:
+      - Username text box.
+      - Password text box.
+      - Login button.
+      - Forgot password link.
+
+    Suppose you want Selenium to enter a username.
+    How does Selenium know which text box to use?
+    We provide a locator to identify that particular element.
+  
+    Example:
+    driver.findElement(By.id("username")).sendKeys("SeleniumUser");
+
+
+2. Types of Selenium Locators
+
+Your HCL module covers these seven locator strategies:
+
+                Locator	                        What it uses
+                ID	                        Element's id attribute
+                Name	                      Element's name attribute
+                ClassName	                  Element's class attribute
+                TagName	                    HTML tag name
+                LinkText	                  Exact visible text of a link
+                PartialLinkText	            Part of a link's visible text
+                XPath	                      Path or expression to locate an element
+                CSS Selector	              CSS-based element selection
