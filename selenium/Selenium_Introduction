@@ -1,0 +1,33 @@
+😊 What is Selenium ?
+      Selenium is an open-source automation tool used to automate web browsers. 
+      It allows us to write programs that perform actions on a website automatically, such as opening a browser, clicking buttons, 
+      entering text, selecting dropdown options, and verifying results.
+      Selenium supports programming languages such as Java, Python, C-sharp, and JavaScript.
+
+ 😊 Why do we need Selenium?
+      Imagine you are testing a login page. Normally, you would manually:
+        1. Open Chrome.
+        2. Enter the website URL.
+        3. Type your username and password.
+        4. Click the Login button.
+        5. Check whether the home page appears.
+    If you need to repeat these steps 100 times, manual testing takes time. Selenium can automate these steps using a program and repeat them whenever required.
+
+Topic 2: Selenium Components
+
+   😊 Selenium has three major components:
+      1. Selenium WebDriver
+      2. Selenium IDE
+      3. Selenium Grid
+      Each component has a different purpose. Let's understand them with practical examples.
+
+      1. Selenium WebDriver
+          Selenium WebDriver is a browser automation tool that allows us to control web browsers programmatically using programming languages 
+          such as Java, Python, C- sharp, and JavaScript.
+          In simple words, WebDriver allows our Java program to interact with a website automatically.
+
+                WebDriver driver = new ChromeDriver();
+                driver.get("https://www.selenium.dev/");
+                System.out.println(driver.getTitle());
+                driver.quit();
+                
